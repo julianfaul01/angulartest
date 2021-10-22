@@ -1,0 +1,18 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+   <mat-icon>menu</mat-icon>
+ </button>
+ <span>My Casino</span>
+</mat-toolbar>
+<mat-tab-group animationDuration="200ms">
+  <mat-tab class="tab-item" *ngFor="let category of categories" [label]="category">
+
+    <div class="games" >
+      <div class="game__tile" *ngFor="let game of games | filterCategory: category : jackpots">
+        <game gamehover [game]="game" [category]="category" [jackpots]="jackpots"
+          [bannerSrc]="hasBanner(game.categories, category)"></game>
+      </div>
+    </div>
+
+  </mat-tab>
+</mat-tab-group>

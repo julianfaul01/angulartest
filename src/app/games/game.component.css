@@ -1,0 +1,68 @@
+.game__tile-banner{
+    position:absolute;
+    right: -7px;
+    top: -7px;
+}
+
+.game__tile-image{
+    width: 100%;
+    height: 100%;
+}
+
+.game__tile-jackpot{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background-color: #00000042;
+    text-align: center;
+}
+
+.game__tile-jackpot span{
+    padding: 5px 0px;
+    display: block;
+}
+.game__tile-play-image{
+    position: relative;
+    top:-150px;
+    -moz-transition: top  0.2s ease-in-out;
+    -o-transition:top  0.2s ease-in-out;
+    transition: top  0.2s ease-in-out;
+    -webkit-transition: top 0.2s ease-in-out;
+}
+.game__tile-play-name{
+    position: relative;
+    bottom:-150px;
+    -moz-transition: bottom  0.2s ease-in-out;
+    -o-transition:bottom  0.2s ease-in-out;
+    transition: bottom  0.2s ease-in-out;
+    -webkit-transition: bottom 0.2s ease-in-out;
+}
+.game__tile-play {
+    position: absolute;
+    z-index: 2;
+    background-color: #0000005e;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    top: 0px;
+    text-align: center;
+    padding-top: 34px;
+    opacity: 0;
+    font-size: 18px;
+    font-weight: bold;
+    -moz-transition: opacity  0.2s ease-in-out;
+    -o-transition:opacity  0.2s ease-in-out;
+    transition: opacity  0.2s ease-in-out;
+    -webkit-transition: opacity 0.2s ease-in-out;
+  }
+
+:host(.gamehover) .game__tile-play {
+    opacity: 1;
+}
+
+:host(.gamehover) .game__tile-play-image{
+    top: 10px;
+}
+:host(.gamehover) .game__tile-play-name{
+    bottom: 0px;
+}

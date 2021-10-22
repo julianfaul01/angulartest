@@ -1,0 +1,16 @@
+.games {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+.game__tile {
+  color: white;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+

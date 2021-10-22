@@ -1,0 +1,22 @@
+
+<div class="game__tile-jackpot" *ngFor="let jackpot of jackpots | filterjackpot: game.id">
+    <span class="game__tile-jackpot-amount">
+        {{ jackpot.amount }}
+    </span>
+</div>
+
+<div class="game__tile-banner" *ngIf="bannerSrc">
+    <img [src]="bannerSrc" width="100" />
+</div>
+<img class="game__tile-image" *ngIf="game.image" [src]="game.image" />
+
+<div class="game__tile-play">
+    <img
+    class="game__tile-play-image"
+      src="https://static.vecteezy.com/system/resources/previews/001/186/943/non_2x/green-play-button-png.png"
+      alt="Play Button"
+      width="80"
+    />
+    <p  class="game__tile-play-name">{{ game.name }}</p>
+  </div>
+
